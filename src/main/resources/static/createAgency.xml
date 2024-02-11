@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:art="http://spring.io/guides/gs-producing-web-service">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <art:addAgencyRequest>
+            <art:name>Agency Agadir</art:name>
+            <art:location>El Massira Agadir</art:location>
+            <art:city>Agadir</art:city>
+        </art:addAgencyRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

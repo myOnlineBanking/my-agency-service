@@ -1,0 +1,24 @@
+###
+##Fetch Agency By Id
+GET https://my-agency-service.herokuapp.com/Agency/getById?agencyId=61ec59626cd964765bb906f6
+Accept: application/json
+
+###
+##Fetch All
+GET https://my-agency-service.herokuapp.com/Agency/getAll
+Accept: application/json
+
+###
+##Add Agency
+POST https://my-agency-service.herokuapp.com/Agency/add
+Content-Type: application/json
+
+{
+  "name": "Agency Essaouira",
+  "location": "Essaouira Morocco",
+  "city": "Essaouira",
+  "idAgent": "61ec3a6f45357116ad0f89c5",
+  "latitude": "31.499120",
+  "longitude": "-9.758347"
+}
+

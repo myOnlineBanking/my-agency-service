@@ -1,0 +1,93 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:element name="getAgencyByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAgencyByIdResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="agency" type="tns:agency"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAllAgenciesRequest">
+        <xs:complexType/>
+    </xs:element>
+
+    <xs:element name="getAllAgenciesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="agency" type="tns:agency" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addAgencyRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="location" type="xs:string"/>
+                <xs:element name="city" type="xs:string"/>
+                <xs:element name="idAgent" type="xs:string"/>
+                <xs:element name="latitude" type="xs:string"/>
+                <xs:element name="longitude" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addAgencyResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="agency" type="tns:agency"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateAgencyRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="agency" type="tns:agency"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="updateAgencyResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="agency" type="tns:agency"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="deleteAgencyRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="agency" type="tns:agency"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="deleteAgencyResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="status" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="agency">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="location" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+</xs:schema>
